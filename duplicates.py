@@ -1,5 +1,5 @@
 import os
-import ar
+import argparse
 
 
 def get_parser_args():
@@ -13,7 +13,7 @@ def get_parser_args():
     return args
 
 def get_files_list(dirpath):
-    dirs = os.listdir(path)
+    dirs = os.listdir(dirpath)
     return dirs
 
 def get_file_size(filepath):
@@ -22,7 +22,7 @@ def get_file_size(filepath):
 
 
 if __name__ == '__main__':
-    args = get_parser_args
+    args = get_parser_args()
     files_list = get_files_list(args.dirpath)
     print(files_list)
     print(type(files_list))
